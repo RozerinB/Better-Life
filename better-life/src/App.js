@@ -9,12 +9,15 @@ function App() {
   return (
     <div>  
     <div >
-      <h1>BetterLife</h1>
+      
+      <h1>What would you like to check ?</h1>
     </div>
     <div> 
-    <button >Mental Health</button>
-    <button>Physical Health</button>
+    <div class="flex">
+    <button>Mental Health</button>
 
+    <button>Physical Health</button>
+    </div>
 
     </div>
     </div>
