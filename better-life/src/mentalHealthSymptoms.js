@@ -1,9 +1,9 @@
 import React from 'react'
 
-const mentalHealthSymptoms = () => {
+const MentalHealthSymptoms = () => {
   return (
     <div>mentalHealthSymptoms</div>
   )
 }
 
-export default mentalHealthSymptoms
+export default MentalHealthSymptoms

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const physicalSymptoms = () => {
+const PhysicalSymptoms = () => {
   return (
     <div>physicalSymptoms</div>
   )
 }
 
-export default physicalSymptoms
+export default PhysicalSymptoms
