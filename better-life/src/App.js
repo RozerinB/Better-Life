@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/mentalHealth' component={MentalHealthSymptoms}>
             <MentalHealthSymptoms />
           </Route>
-          <Route exact path='/physicallHealth' component={PhysicalSymptoms}>
+          <Route exact path='/physicalHealth' component={PhysicalSymptoms}>
             <PhysicalSymptoms />
           </Route>
 
