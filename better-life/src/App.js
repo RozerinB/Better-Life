@@ -1,27 +1,28 @@
 import React from 'react';
-import {  Route, Routes , useNavigate} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './App.css';
 import MentalHealthSymptoms from './mentalHealthSymptoms';
 import PhysicalSymptoms from './physicalSymptoms';
+import OptionsPage from './optionsPage';
 
 function App() {
-
   return (
-    <div>  
-    <div >
-      
-      <h1>What would you like to check ?</h1>
-    </div>
-    <div> 
-    <div class="flex">
-    <button>Mental Health</button>
+    <Router>
+      <div className="App">
+        <Switch>
+        <Route exact path='/' component={OptionsPage}>
+            <OptionsPage />
+          </Route>
+          <Route exact path='/mentalHealth' component={MentalHealthSymptoms}>
+            <MentalHealthSymptoms />
+          </Route>
+          <Route exact path='/physicallHealth' component={PhysicalSymptoms}>
+            <PhysicalSymptoms />
+          </Route>
 
-    <button>Physical Health</button>
-    </div>
-
-    </div>
-    </div>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
 export default App;

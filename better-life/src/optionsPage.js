@@ -1,40 +1,31 @@
 import React from 'react'
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Route, useHistory} from 'react-router-dom';
 import MentalHealthSymptoms from './mentalHealthSymptoms'
 import PhysicalSymptoms from './physicalSymptoms';
 
 const OptionsPage = () => {
 
-    const navigate = useNavigate();
+    const history = useHistory();
 
     const navigateToMentalHealthPage = () => {
         // 👇️ navigate to /mentalHealth
-        navigate('/mentalHealth');
+        history.push('/mentalHealth');
     };
     
     const navigatePhsyicalSymptomPage = () => {
         // 👇️ navigate to /physicalHealth
-        navigate('/physicalHealth');
+        history.push('/physicalHealth');
     };
     
 
 return (
     <div>
-        
-    <h1> Better Life</h1>
-
-    <div> 
-        <button onClick={navigateToMentalHealthPage} > Mental Health </button>
-        <button onClick={navigatePhsyicalSymptomPage} > Physical Symptoms </button>
-
-        <Routes>
-        <Route path="/mentalHealth" element={ <MentalHealthSymptoms /> } />
-        <Route path="/physicalHealth" element={  <PhysicalSymptoms /> } />
-        </Routes>
-
-    </div>
-
-
+        <h1> Better Life</h1>
+        <h2> What would you like to check? </h2>
+        <div> 
+            <button className = "buttons" onClick={navigateToMentalHealthPage} element={MentalHealthSymptoms} > Mental Health </button>
+            <button className = "buttons" onClick={navigatePhsyicalSymptomPage} element={PhysicalSymptoms}> Physical Symptoms </button>
+        </div>
     </div>
 
 )
