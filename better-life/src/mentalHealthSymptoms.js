@@ -4,8 +4,17 @@ import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
+
+
 const MentalHealthSymptoms = () => {
 
+  const [age, setAge] = React.useState('');
+  
 
   return (
     <div> 
@@ -16,6 +25,39 @@ const MentalHealthSymptoms = () => {
 
     <div> 
       <h3> Please select your current symtpoms: </h3>
+      <FormControl sx={{ m: 1, minWidth: 80 }}>
+      <InputLabel id="demo-simple-select-label">Age</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={age}
+    label="Age"
+   
+  >
+    <MenuItem value={18}>18</MenuItem>
+    <MenuItem value={19}>19</MenuItem>
+    <MenuItem value={20}>20</MenuItem>
+    <MenuItem value={21}>21</MenuItem>
+    
+  </Select>
+  </FormControl>
+
+  <FormControl sx={{ m: 1, minWidth: 80 }}>
+  
+  <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={age}
+    label="Gender"
+   
+  >
+    <MenuItem value={18}>Male</MenuItem>
+    <MenuItem value={19}>Female</MenuItem>
+    
+    
+  </Select>
+  </FormControl>
     <Form.Check 
       id={`question1`}
       label={`Feeling sad or down`}
@@ -48,7 +90,12 @@ const MentalHealthSymptoms = () => {
       id={`question8`}
       label={`Suicidal thoughts`}
     />
+
+
     <Button variant="primary">Submit</Button>{' '}
+
+
+
           
   </div>
   </div>
